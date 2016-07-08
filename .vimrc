@@ -23,7 +23,7 @@ inoremap (<Enter> ()<Left><CR><ESC><S-o>
 
 set background=dark
 "colorscheme rdark
-colorscheme railscasts
+"colorscheme railscasts
 "colorscheme hybrid
 set guifont=Ricty_Diminished:h11
 
@@ -73,7 +73,7 @@ inoremap <C-l> <Right>
 
 set noswapfile
 set nobackup
-set undodir=C:\Program_Files\vim74-kaoriya-win64\undo
+"set undodir=C:\Program_Files\vim74-kaoriya-win64\undo
 
 set hidden "while editing enable openning another file
 set confirm "confiem when tried to close window without saving
