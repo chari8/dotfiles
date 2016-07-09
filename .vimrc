@@ -1,9 +1,53 @@
+
+"dein script---------------------------------------------------------
+
+if &compatible
+	set nocompatible
+endif
+
+let s:dein_dir = expand('~/.cache/dein')
+
+" dein.vim itself
+let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
+
+"if no dein.vim get it from github
+if &runtimepath !~# '/dein.vim'
+  if !isdirectory(s:dein_repo_dir)
+    execute '!git clone https://github.com/Shougo/dein.vim' s:dein_repo_dir
+  endif
+  execute 'set runtimepath^=' . fnamemodify(s:dein_repo_dir, ':p')
+endif
+
+" start setting
+if dein#load_state(s:dein_dir)
+  call dein#begin(s:dein_dir)
+
+  let g:rc_dir = expand('~/.vim/rc')
+  let s:toml      = g:rc_dir . '/dein.toml'
+  let s:lazy_toml = g:rc_dir . '/dein_lazy.toml'
+
+  " read toml and cache it
+  call dein#load_toml(s:toml,      {'lazy': 0})
+  call dein#load_toml(s:lazy_toml, {'lazy': 1})
+
+  " end setting
+  call dein#end()
+  call dein#save_state()
+endif
+
+" install not installed plugins
+if dein#check_install()
+  call dein#install()
+endif 
+
+"end dein script---------------------------------------------------------
+
 set number
 set nowrap
 
 set ruler
 set cursorline
-set cursorcolumn
+"set cursorcolumn
 set virtualedit=all "let cursor move to everywhere
 
 syntax on
@@ -16,16 +60,13 @@ set matchtime=1 "highlight for 0.1 sec
 set matchpairs& matchpairs+=<:> "add < > to matchpairs
 
 "bracket completion
-inoremap { {}<Left>
-inoremap {<Enter> {}<Left><CR><ESC><S-o>
-inoremap ( ()<ESC>i
-inoremap (<Enter> ()<Left><CR><ESC><S-o>
+"inoremap { {}<Left>
+"inoremap {<Enter> {}<Left><CR><ESC><S-o>
+"inoremap ( ()<ESC>i
+"inoremap (<Enter> ()<Left><CR><ESC><S-o>
 
 set background=dark
-"colorscheme rdark
-"colorscheme railscasts
-"colorscheme hybrid
-set guifont=Ricty_Diminished:h11
+"set guifont=Ricty_Diminished:h11
 
 
 
@@ -38,18 +79,26 @@ set wildmode=longest,full
 set pumheight=10 "set height of menu
 
 set wrapscan
-set autoindent
 
-set nolist
-"set listchars=tab:>.,trail:_,eol:?,extends:>,precedes:<,nbsp:%
+set list   "visualize empty space
+"set nolist
+"set listchars=tab:>-,trail:-,eol:],extends:>,precedes:<,nbsp:%
+"set listchars=tab:笆ｸ.,trail:-.,eol:$,precedes:<,nbsp:%
+set listchars=tab:>笆ｸ,trail:笆ｸ,eol:竊ｲ,extends:>,precedes:<,nbsp:%
+
 
 set display=lastline "diplay the line no matter how long it is
 set columns=100
 set lines=32
 
 
-set softtabstop=2
-set expandtab
+set backspace=2
+set autoindent
+set cindent
+"set expandtab
+set shiftwidth=7
+
+
 
 set clipboard=unnamed
 
@@ -80,7 +129,9 @@ set confirm "confiem when tried to close window without saving
 set autoread "if file is edited by other program while being open by gvim, rewrite
 
 
-set scrolloff=8 "上下に8行の視野を確保
-set sidescrolloff=16 "左右スクロール時に１６行の視野を確保
-set sidescroll=1 "左右のスクロールは一文字ずつ行う
+set scrolloff=8 
+set sidescrolloff=16 
+set sidescroll=1 
+
+
 
