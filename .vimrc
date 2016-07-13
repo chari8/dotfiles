@@ -87,9 +87,9 @@ set list   "visualize empty space
 set listchars=tab:>▸,trail:▸,eol:↲,extends:>,precedes:<,nbsp:%
 
 
-set display=lastline "diplay the line no matter how long it is
-set columns=100
-set lines=32
+set display=lastline "display the line no matter how long it is
+"set columns=100
+"set lines=32
 
 
 set backspace=2
@@ -122,7 +122,7 @@ inoremap <C-l> <Right>
 
 set noswapfile
 set nobackup
-"set undodir=C:\Program_Files\vim74-kaoriya-win64\undo
+set undodir = "$HOME/.vim/undo"
 
 set hidden "while editing enable openning another file
 set confirm "confiem when tried to close window without saving
