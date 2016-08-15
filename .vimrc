@@ -80,8 +80,8 @@ set pumheight=10 "set height of menu
 
 set wrapscan
 
-set list   "visualize empty space
-"set nolist
+"set list   "visualize empty space
+set nolist
 "set listchars=tab:>-,trail:-,eol:],extends:>,precedes:<,nbsp:%
 "set listchars=tab:▸.,trail:-.,eol:$,precedes:<,nbsp:%
 set listchars=tab:>▸,trail:▸,eol:↲,extends:>,precedes:<,nbsp:%
@@ -95,8 +95,8 @@ set display=lastline "display the line no matter how long it is
 set backspace=2
 set autoindent
 set cindent
-"set expandtab
-set shiftwidth=7
+set expandtab
+"set shiftwidth=7
 
 
 
