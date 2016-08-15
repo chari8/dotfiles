@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "*****************************************\n" >> $PWD/log.txt 
+echo "*****************************************" >> $PWD/log.txt 
 date >> $PWD/log.txt
 echo "remove old vim" >> $PWD/log.txt 
 yum remove vim >> $PWD/log.txt
@@ -46,4 +46,4 @@ ln -s -f "$PWD/.vimrc" "$HOME/.vim/vimrc" >> $PWD/log.txt
 ln -s -f "$PWD/dein.toml" "$HOME/.vim/rc/dein.toml" >> $PWD/log.txt 
 ln -s -f "$PWD/dein_lazy.toml" "$HOME/.vim/rc/dein_lazy.toml" >> $PWD/log.txt 
 date >> $PWD/log.txt
-echo "*****************************************\n" >> $PWD/log.txt 
+echo "*****************************************" >> $PWD/log.txt 

@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "*****************************************\n" >> $PWD/log.txt 
+echo "*****************************************" >> $PWD/log.txt 
 date >> $PWD/log.txt
 echo "remove old vim" >> $PWD/log.txt 
 apt remove vim >> $PWD/log.txt
@@ -13,7 +13,7 @@ apt install lua-devel >> $PWD/log.txt
 apt install luajit >> $PWD/log.txt
 echo "install python & python3" >> $PWD/log.txt 
 apt install python >> $PWD/log.txt
-apt install python3-devel >> $PWD/log.txt
+apt install python3-dev >> $PWD/log.txt
 
 echo "install vim" >> $PWD/log.txt 
 mkdir "$PWD/src" >> $PWD/log.txt
@@ -45,4 +45,4 @@ ln -s -f "$PWD/.vimrc" "$HOME/.vim/vimrc" >> $PWD/log.txt
 ln -s -f "$PWD/dein.toml" "$HOME/.vim/rc/dein.toml" >> $PWD/log.txt 
 ln -s -f "$PWD/dein_lazy.toml" "$HOME/.vim/rc/dein_lazy.toml" >> $PWD/log.txt 
 date >> $PWD/log.txt
-echo "*****************************************\n" >> $PWD/log.txt 
+echo "*****************************************" >> $PWD/log.txt 
