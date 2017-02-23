@@ -84,7 +84,7 @@ set wrapscan
 set nolist
 "set listchars=tab:>-,trail:-,eol:],extends:>,precedes:<,nbsp:%
 "set listchars=tab:▸.,trail:-.,eol:$,precedes:<,nbsp:%
-set listchars=tab:>▸,trail:▸,eol:↲,extends:>,precedes:<,nbsp:%
+"set listchars=tab:>▸,trail:▸,eol:↲,extends:>,precedes:<,nbsp:%
 
 
 set display=lastline "display the line no matter how long it is

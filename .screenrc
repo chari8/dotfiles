@@ -1,0 +1,34 @@
+defutf8 on
+defencoding utf8
+encoding utf8 utf8
+
+# set scroll buffer
+defscrollback 10000
+
+# turn off start up message
+startup_message off
+
+# color setting
+defbce on
+term xterm-256color
+
+# detouch automatically when the terminal is turned off
+autodetach on
+
+# turn off visual bell
+vbell off
+
+caption always "%-w%10L>%{=b bw}%n %t%{-}%+w%-0="
+hardstatus alwayslastline "%H%=%Y/%m/%d %02c"
+
+
+# display window name default window name : zsh
+shelltitle "$ |zsh"
+
+
+# open 3 screen for default
+screen 0
+screen 1
+screen 2
+
+select 0
