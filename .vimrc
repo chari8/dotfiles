@@ -1,4 +1,3 @@
-
 "dein script---------------------------------------------------------
 
 if &compatible
@@ -73,7 +72,6 @@ set background=dark
 "set guifont=Ricty_Diminished:h11
 
 
-
 set incsearch "do incremental searching
 set ignorecase "ignorecase when searching
 set smartcase "under ignorecase search, when search with large case, do not ignore case
@@ -108,8 +106,9 @@ set autoindent
 set smartindent
 set cindent
 set expandtab
-set tabstop=2
-set shiftwidth=2
+set tabstop=4 
+set shiftwidth=4
+set softtabstop=0
 
 
 set ambiwidth=double
