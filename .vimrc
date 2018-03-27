@@ -47,10 +47,14 @@ set nowrap
 
 set ruler
 set cursorline
-"set cursorcolumn
+set cursorcolumn
 set virtualedit=all "let cursor move to everywhere
 
 syntax on
+filetype plugin indent on 
+set t_Co=256
+set fileformats=unix,dos
+
 set hlsearch
 "set fileencoding=utf-8 "when :w, write in utf-8
 nnoremap <ESC><ESC> :nohl<CR><C-L> 
@@ -75,7 +79,11 @@ set ignorecase "ignorecase when searching
 set smartcase "under ignorecase search, when search with large case, do not ignore case
 
 set wildmenu
-set wildmode=longest,full
+set wildmode=list,full
+set wildignore=*.o,*.obj,*.pyc,*.so,*.dll
+
+let g:python_highlight_all = 1
+
 set pumheight=10 "set height of menu
 
 set wrapscan
@@ -92,17 +100,26 @@ set display=lastline "display the line no matter how long it is
 "set lines=32
 
 
-set backspace=2
+"set backspace=2
+set backspace=indent,eol,start
+"let backspace work
+noremap!   
 set autoindent
+set smartindent
 set cindent
 set expandtab
-"set shiftwidth=7
+set tabstop=2
+set shiftwidth=2
 
 
+set ambiwidth=double
+if has('path_extra')
+  set tags& tags+=.tags,tags
+endif
 
 set clipboard=unnamed
 
-set history=2000
+set history=5000
 set showcmd
 
 set laststatus=2 "show status always on the bottom of the window
@@ -122,7 +139,7 @@ inoremap <C-l> <Right>
 
 set noswapfile
 set nobackup
-set undodir = "$HOME/.vim/undo"
+set undodir="$HOME/.vim/undo"
 
 set hidden "while editing enable openning another file
 set confirm "confiem when tried to close window without saving
@@ -134,4 +151,17 @@ set sidescrolloff=16
 set sidescroll=1 
 
 
+"setting for mouse
+if has('mouse')
+    set mouse=a
+    if has('mouse_sgr')
+        set ttymouse=sgr
+    elseif v:version > 703 || v:version is 703 && has('patch632')
+        set ttymouse=sgr
+    else
+        set ttymouse=xterm2
+    endif
+endif
 
+
+"setting for paste
