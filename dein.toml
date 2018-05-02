@@ -30,3 +30,9 @@ repo = 'kana/vim-operator-replace'
 
 [[plugins]]
 repo = 'rhysd/vim-operator-surround'
+
+[[plugins]]
+repo = 'itchyny/lightline.vim'
+
+[[plugins]]
+repo = 'nathanaelkane/vim-indent-guides'
