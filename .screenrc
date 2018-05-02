@@ -23,7 +23,7 @@ hardstatus alwayslastline "%H%=%Y/%m/%d %02c"
 
 
 # display window name default window name : zsh
-shelltitle "$ |zsh"
+shelltitle "$PWD | $BASH"
 
 
 # open 3 screen for default
@@ -32,3 +32,17 @@ screen 1
 screen 2
 
 select 0
+
+
+#original setting
+#startup_message off
+#vbell off
+#escape ^Z^Z
+#
+#termcapinfo * 'hs:ts=\E]2;:fs=\007:ds=\E]0;screen\007'
+#caption always "%{= wb} %-w%{=bu db}%n %t%{-}%+w %= %{=b bw} %h"
+#
+#'autocolor b ".I"
+#'defbce on
+#'termcapinfo xterm* Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+

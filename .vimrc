@@ -46,7 +46,7 @@ set nowrap
 
 set ruler
 set cursorline
-"set cursorcolumn
+set cursorcolumn
 set virtualedit=all "let cursor move to everywhere
 
 syntax on
@@ -64,7 +64,8 @@ set matchpairs& matchpairs+=<:> "add < > to matchpairs
 "inoremap ( ()<ESC>i
 "inoremap (<Enter> ()<Left><CR><ESC><S-o>
 
-set background=dark
+"set background=dark
+colorscheme koehler
 "set guifont=Ricty_Diminished:h11
 
 
