@@ -23,8 +23,7 @@ hardstatus alwayslastline "%H%=%Y/%m/%d %02c"
 
 
 # display window name default window name : zsh
-shelltitle "$PWD | $BASH"
-
+shelltitle "$PWD | $SHELL"
 
 # open 3 screen for default
 screen 0
