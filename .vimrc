@@ -69,7 +69,8 @@ set matchpairs& matchpairs+=<:> "add < > to matchpairs
 "inoremap (<Enter> ()<Left><CR><ESC><S-o>
 
 "set background=dark
-colorscheme koehler
+"colorscheme koehler
+colorscheme iceberg
 "set guifont=Ricty_Diminished:h11
 
 
@@ -99,10 +100,6 @@ set display=lastline "display the line no matter how long it is
 "set lines=32
 
 
-"set backspace=2
-set backspace=indent,eol,start
-"let backspace work
-noremap!   
 set autoindent
 set smartindent
 set cindent

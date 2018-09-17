@@ -35,4 +35,7 @@ repo = 'rhysd/vim-operator-surround'
 repo = 'itchyny/lightline.vim'
 
 [[plugins]]
+repo = 'cocopon/iceberg.vim'
+
+[[plugins]]
 repo = 'nathanaelkane/vim-indent-guides'
