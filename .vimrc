@@ -99,10 +99,6 @@ set display=lastline "display the line no matter how long it is
 "set lines=32
 
 
-"set backspace=2
-set backspace=indent,eol,start
-"let backspace work
-noremap!   
 set autoindent
 set smartindent
 set cindent

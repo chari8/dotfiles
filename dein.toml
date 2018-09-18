@@ -45,4 +45,7 @@ repo = 'cocopon/iceberg.vim'
 repo = 'edkolev/promptline.vim'
 
 [[plugins]]
+repo = 'cocopon/iceberg.vim'
+
+[[plugins]]
 repo = 'nathanaelkane/vim-indent-guides'
