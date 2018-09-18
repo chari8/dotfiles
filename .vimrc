@@ -1,7 +1,7 @@
 "dein script---------------------------------------------------------
 
 if &compatible
-	set nocompatible
+ set nocompatible
 endif
 
 let s:dein_dir = expand('~/.cache/dein')
@@ -69,7 +69,7 @@ set matchpairs& matchpairs+=<:> "add < > to matchpairs
 "inoremap (<Enter> ()<Left><CR><ESC><S-o>
 
 "set background=dark
-colorscheme koehler
+colorscheme iceberg
 "set guifont=Ricty_Diminished:h11
 
 
